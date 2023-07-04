@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yummy.eats</title>
+    <link rel="styleSheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay">
+      <h3>Search now...</h3>
+    </div>
+
+    <div class="hero-bg">
+      <section class="top">
+        <header>
+          <a href="#">yummy.eats</a>
+        </header>
+        <h1><span>The Healthy</span> Eating Experience</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+          inventore harum id pariatur accusantium iste quo quia voluptatibus
+          consequuntur eius?
+        </p>
+
+        <div class="form-container">
+          <form>
+            <div class="form-left">
+              <label for="" city>Enter your city:</label>
+              <input type="text" name="city" id="city" />
+              <p>Example: "San Diego"</p>
+            </div>
+            <input type="button" value="Find Food Now" id="ctn-btn" />
+          </form>
+        </div>
+      </section>
+    </div>
+    <section class="authentic">
+      <div class="right-col">
+        <h2>Authentic. Awesome.</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum soluta
+          recusandae officia nostrum suscipit? Laudantium ut maxime ab eum
+          commodi est error veritatis et. Nulla quisquam numquam perferendis
+          repudiandae cum.
+        </p>
+      </div>
+      <img src="images/food.jpeg" alt="Picture of food in a bowl" />
+    </section>
+
+    <script>
+      let btn = document.getElementById("ctn-btn");
+      let overlay = document.getElementById("overlay");
+      btn.addEventListener("click", () => {
+        overlay.style.display = "grid";
+        overlay.classList.add("animate-overlay");
+      });
+      overlay.addEventListener("animationend", () => {
+        overlay.classList.remove("animate-overlay");
+        overlay.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
